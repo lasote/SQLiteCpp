@@ -5,11 +5,12 @@ IF(BIICODE)
 
   SET(BII_CREATE_LIB True)
 
-  # Include base dir
-  INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
   # Include base block dir
   ADD_BIICODE_TARGETS()
-
+  
+  # Add some sources
+  TARGET_INCLUDE_DIRECTORIES(${BII_LIB_TARGET} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+ 
   # Link target with dl for linux
   IF (UNIX)
    IF(NOT APPLE)

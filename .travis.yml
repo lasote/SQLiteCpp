@@ -16,17 +16,16 @@ install:
 script:
 - cmake --version
 - bii init biicode_project
-- mkdir -p ./biicode_project/blocks/lasote/sqlite
-- mv !(biicode_project) ./biicode_project/blocks/lasote/sqlite
+- mkdir -p ./biicode_project/blocks/sqlite/sqlite
+- mv !(biicode_project) ./biicode_project/blocks/sqlite/sqlite
 - cd biicode_project
 - bii find -um
 - bii cpp:build
 - cd bin
 - ./sqlite_sqlite_examples_example1_main
 after_success:
-- bii user lasote -p $BII_LASOTE_PASSWORD
+- bii user sqlite -p $BII_SQLITE_PASSWORD
 - bii publish
 env:
   global:
-    secure: d+SQFxeGGYYMmhN2ngOi5yKxy3UNGYMbx+Hzp8ufDdHQi1/fmnxh8MHQ785QKq4BK6zsNyisGoeJwnl/DzPHzG7SuaO6hZ3MbdZ7fuzmOyjXsCVdyYM6aowOFM4ZKGlRIz3wUZt0Iqhnw44/gVmrzFdKfBw+7P/L4IMKS0+I9Tw=
-
+    secure: kMNJoxgvclaaJAg7TCRvRIRrkR9aDs1KUPWdYg7+0GZ4lcJgthHuL4+PoyWOqAsyH5mtWPAZ9ipg/zl2MmwL1JRCaL3cvc/7h4SzVKDAEgvh88eDhOAzrN9V2XA8ORyNyVMTLPISIjg4Vj7roXZVVq3dNrwy0TqZAQ3edsMWWNw=
