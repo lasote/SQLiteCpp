@@ -1,7 +1,10 @@
 SQLiteC++
 ---------
 
-![SQLiteCpp build status](https://api.travis-ci.org/SRombauts/SQLiteCpp.png "SQLiteCpp build status")
+Fork with min changes to work with Biicode: http://www.biicode.com/sqlite/sqlite
+
+
+![SQLiteCpp build status][![Build Status](https://travis-ci.org/lasote/SQLiteCpp.svg?branch=master)](https://travis-ci.org/lasote/SQLiteCpp)
 
 SQLiteC++ (SQLiteCpp) is a smart and easy to use C++ SQLite3 wrapper.
 
