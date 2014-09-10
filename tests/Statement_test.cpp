@@ -12,7 +12,7 @@
 #include <SQLiteCpp/Database.h>
 #include <SQLiteCpp/Statement.h>
 
-#include <gtest/gtest.h>
+#include <google/gtest/gtest.h>
 
 #include <cstdio>
 

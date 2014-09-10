@@ -31,10 +31,12 @@ void assertion_failed(const char* apFile, const long apLine, const char* apFunc,
 }
 #endif
 
+// bii://example.db3
 /// Example Database
-static const char* filename_example_db3 = "examples/example1/example.db3";
+static const char* filename_example_db3 = "sqlite/sqlite/examples/example1/example.db3";
+// bii://logo.png
 /// Image
-static const char* filename_logo_png    = "examples/example1/logo.png";
+static const char* filename_logo_png    = "sqlite/sqlite/examples/example1/logo.png";
 
 
 /// Object Oriented Basic example

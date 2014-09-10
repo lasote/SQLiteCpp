@@ -11,7 +11,7 @@
 
 #include <SQLiteCpp/Database.h>
 
-#include <gtest/gtest.h>
+#include <google/gtest/gtest.h>
 
 #include <cstdio>
 

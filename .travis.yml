@@ -1,19 +1,32 @@
 language: cpp
-
 compiler:
-  - gcc
-  - clang
-
+- gcc
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq cppcheck
- 
-# using a symbolic link to get the "make test" to work as if launched from the root directorys
-before_script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  - ln -s ../examples examples
-
-script: make && ctest --output-on-failure
+- sudo apt-get update -qq
+install:
+- wget http://www.biicode.com/downloads/latest/ubuntu32
+- mv ubuntu32 bii-ubuntu32.deb
+- (! sudo dpkg -i bii-ubuntu32.deb ) && sudo apt-get -f install
+- rm bii-ubuntu32.deb
+- wget http://www.cmake.org/files/v3.0/cmake-3.0.1-Linux-i386.tar.gz
+- tar -xzf cmake-3.0.1-Linux-i386.tar.gz
+- sudo cp -fR cmake-3.0.1-Linux-i386/* /usr
+- rm -rf cmake-3.0.1-Linux-i386
+- rm cmake-3.0.1-Linux-i386.tar.gz
+script:
+- cmake --version
+- bii init biicode_project
+- mkdir -p ./biicode_project/blocks/lasote/sqlite
+- mv !(biicode_project) ./biicode_project/blocks/lasote/sqlite
+- cd biicode_project
+- bii find -um
+- bii cpp:build
+- cd bin
+- ./sqlite_sqlite_examples_example1_main
+after_success:
+- bii user lasote -p $BII_LASOTE_PASSWORD
+- bii publish
+env:
+  global:
+    secure: d+SQFxeGGYYMmhN2ngOi5yKxy3UNGYMbx+Hzp8ufDdHQi1/fmnxh8MHQ785QKq4BK6zsNyisGoeJwnl/DzPHzG7SuaO6hZ3MbdZ7fuzmOyjXsCVdyYM6aowOFM4ZKGlRIz3wUZt0Iqhnw44/gVmrzFdKfBw+7P/L4IMKS0+I9Tw=
 
