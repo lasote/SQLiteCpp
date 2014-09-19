@@ -1,0 +1,3 @@
+include/SQLiteCpp/Assertion.h - tests/Database_test.cpp
+include/SQLiteCpp/Assertion.h - examples/example1/main.cpp
+
