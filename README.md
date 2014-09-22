@@ -1,7 +1,9 @@
 SQLiteC++ [![Build Status](https://travis-ci.org/lasote/SQLiteCpp.svg?branch=master)](https://travis-ci.org/lasote/SQLiteCpp)
 ---------
 
-Fork with min changes to work with Biicode: http://www.biicode.com/sqlite/sqlite
+The biicode block (http://www.biicode.com/sqlite/sqlite/sqlite/master) has been generated from the forked github repo: (https://github.com/lasote/SQLiteCpp). It includes slight modifications added to the original repository (https://github.com/SRombauts/SQLiteCpp) in order to work properly with biicode. 
+
+The github fork is configured to automatically publish to biicode via travis-ci.
 
 ![SQLiteCpp build status]
 
