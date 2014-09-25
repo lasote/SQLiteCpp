@@ -5,7 +5,7 @@ before_install:
 - sudo apt-get update -qq
 install:
 - wget http://www.biicode.com/downloads/latest/ubuntu64
-- mv ubunt64 bii-ubuntu64.deb
+- mv ubuntu64 bii-ubuntu64.deb
 - (! sudo dpkg -i bii-ubuntu64.deb ) && sudo apt-get -f install
 - rm bii-ubuntu64.deb
 - wget http://www.cmake.org/files/v3.0/cmake-3.0.1-Linux-i386.tar.gz
